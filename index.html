@@ -1,1 +1,160 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Rafhönnun</title>
+
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+	<style>
+		body, html {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			font-family: 'Inter', sans-serif;
+		}
+
+		.bg {
+			/* The image used */
+			background-image: url("interior.jpeg");
+
+			/* Full height */
+			height: 100vh;
+			width: 100vw;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+
+			padding: 0;
+		}
+
+		.navigation-logo {
+			width: 100%;
+			display: flex;
+			justify-content: left;
+			align-items: flex-start;
+			padding: 20px 40px;
+		}
+		.navigation-logo img {
+			height: 100%;
+			max-height: 42px;
+		}
+		@media screen and (max-width:404px){
+			.navigation-logo {
+				padding: 20px;
+			}
+			.navigation-logo img {
+				height: 100%;
+				max-height: 32px;
+			}
+		}
+
+		.keywords{
+			position:relative;
+			margin:0 auto;
+			width:100%;
+			height:auto;
+			top: 170px;
+
+			font-size: 3.5em;
+			color: #fff;
+			text-align: center;
+		}
+
+		.words {
+			display: inline;
+			text-indent: 10px;
+		}
+		.keywords h3{
+			position: absolute;
+			right:0;
+			left:0;
+			top:75px;
+			opacity: 0;
+			overflow: hidden;
+			-webkit-animation: rotate 12s linear infinite 0s;
+			-ms-animation: rotate 12s linear infinite 0s;
+			animation: rotate 12s linear infinite 0s;
+		}
+
+		.keywords h3:nth-child(2) {
+			-webkit-animation-delay: 3s;
+			-ms-animation-delay: 3s;
+			animation-delay: 3s;
+		}
+		.keywords h3:nth-child(3) {
+			-webkit-animation-delay: 6s;
+			-ms-animation-delay: 6s;
+			animation-delay: 6s;
+		}
+		.keywords h3:nth-child(4) {
+			-webkit-animation-delay: 9s;
+			-ms-animation-delay: 9s;
+			animation-delay: 9s;
+		}
+
+		@-webkit-keyframes rotate {
+			0% { opacity: 0; }
+			2% { opacity: 0; -webkit-transform: translateY(-30px); }
+			5% { opacity: 1; -webkit-transform: translateY(0px);}
+			17% { opacity: 1; -webkit-transform: translateY(0px); }
+			20% { opacity: 0; -webkit-transform: translateY(30px); }
+			80% { opacity: 0; }
+			100% { opacity: 0; }
+		}
+
+		@media screen and (max-width:404px){
+			.keywords {
+				font-size:3em;
+			}
+		}
+
+		.footer {
+			/*position: absolute;*/
+			/*bottom: 0;*/
+			width: 100%;
+			display: none;
+			justify-content: center;
+			align-items: center;
+			padding: 0 40px 60px;
+		}
+		.footer a {
+			color: #414141;
+			font-size: 44px;
+			text-decoration: none;
+			font-weight: 600;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<div class="navigation-bar">
+			<div class="navigation-logo">
+				<img src="rafhonnun_logo_white.png" alt="Rafhönnun logo" />
+			</div>
+			<div class="keywords">
+				<div class="words">
+					<h3>Lýsing.</h3>
+					<h3>Rafmagn.</h3>
+					<h3>Hönnun.</h3>
+					<h3>Teikning.</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>Sigurður Ágúst Pétursson</p>
+		<a href="mailto:siggi@ror.is">siggi@ror.is</a>
+		<p>Sími: 664-0047</p>
+	</div>
+</body>
+</html>
+
