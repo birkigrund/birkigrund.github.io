@@ -18,6 +18,7 @@
 			margin: 0;
 			padding: 0;
 			font-family: 'Inter', sans-serif;
+			overflow: clip;
 		}
 
 		.bg {
@@ -46,7 +47,7 @@
 			height: 100%;
 			max-height: 42px;
 		}
-		@media screen and (max-width:404px){
+		@media screen and (max-width:434px){
 			.navigation-logo {
 				padding: 20px;
 			}
@@ -110,26 +111,67 @@
 			100% { opacity: 0; }
 		}
 
-		@media screen and (max-width:404px){
+		@media screen and (max-width:434px){
 			.keywords {
 				font-size:3em;
 			}
 		}
 
 		.footer {
-			/*position: absolute;*/
-			/*bottom: 0;*/
 			width: 100%;
-			display: none;
-			justify-content: center;
-			align-items: center;
-			padding: 0 40px 60px;
+			position: absolute;
+			bottom: 0;
 		}
-		.footer a {
-			color: #414141;
-			font-size: 44px;
+		.footer-container {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		.footer-container div {
+			display: flex;
+			align-items: center;
+			height: 100px;
+			width: 100%;
+			padding: 0 10px;
+		}
+		.footer-container div:nth-child(1) {
+			justify-content: left;
+		}
+		.footer-container div:nth-child(2) {
+			justify-content: center;
+		}
+		.footer-container div:nth-child(3) {
+			justify-content: right;
+		}
+		.footer-container p {
+			color: #fff;
+			font-size: 20px;
 			text-decoration: none;
 			font-weight: 600;
+		}
+		.footer-container a {
+			color: #fff;
+			font-size: 20px;
+			text-decoration: none;
+			font-weight: 600;
+		}
+		.footer-container a:hover {
+			scale: 1.1;
+			transition-duration: 200ms;
+		}
+		@media screen and (max-width:434px){
+			.footer-container div {
+				height: 80px;
+			}
+			.footer-container p {
+				font-size: 16px;
+			}
+			.footer-container p .last-name {
+				display: none;
+			}
+			.footer-container a {
+				font-size: 16px;
+			}
 		}
 	</style>
 </head>
@@ -141,18 +183,28 @@
 			</div>
 			<div class="keywords">
 				<div class="words">
-					<h3>Lýsing.</h3>
-					<h3>Rafmagn.</h3>
-					<h3>Hönnun.</h3>
-					<h3>Teikning.</h3>
+					<h3>Lýsing</h3>
+					<h3>Rafmagn</h3>
+					<h3>Hönnun</h3>
+					<h3>Teikning</h3>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="footer">
-		<p>Sigurður Ágúst Pétursson</p>
-		<a href="mailto:siggi@ror.is">siggi@ror.is</a>
-		<p>Sími: 664-0047</p>
+		<div class="footer-container">
+			<div>
+				<p>Sigurður Ágúst <span class="last-name">Pétursson</span></p>
+			</div>
+			<div>
+				<p>
+					<a href="mailto:siggi@ror.is">siggi@ror.is</a>
+				</p>
+			</div>
+			<div>
+				<p>664-0047</p>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
